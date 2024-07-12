@@ -1,15 +1,15 @@
 export const navigation = [
   {
-    label:"header_direction",
+    label: "header_direction",
     route: "/",
     ml: true,
   },
   {
-    label:"header_command",
+    label: "header_command",
     route: "/",
   },
   {
-    label:"header_services",
+    label: "header_services",
     route: "/",
     menu: true,
     menuItem: [
@@ -33,15 +33,15 @@ export const navigation = [
     ],
   },
   {
-    label:"header_tools",
+    label: "header_tools",
     route: "/",
   },
   {
-    label:"header_clients",
+    label: "header_clients",
     route: "/",
   },
   {
-    label:"header_portfolio",
+    label: "header_portfolio",
     route: "/",
     menu: true,
     menuItem: [
@@ -52,19 +52,48 @@ export const navigation = [
     ],
   },
   {
-    label:"header_Language",
+    label: "header_Language",
     route: "/",
     menu: true,
-    lang:true,
+    lang: true,
     menuItem: [
-      { name: "Рус", lng:"rus", img: "./images/rus.svg" },
-      { name: "Eng", lng:"eng", img: "./images/eng.svg" },
+      { name: "Рус", lng: "rus", img: "./images/rus.svg" },
+      { name: "Eng", lng: "eng", img: "./images/eng.svg" },
     ],
   },
 
   {
-    label:"header_contact",
+    label: "header_contact",
     route: "/",
     button: true,
+  },
+];
+
+export const ourService = [
+  {
+    name: "team",
+    img: "./images/team.svg",
+  },
+  {
+    name: "mobile_app",
+    img: "./images/mobileApp.svg",
+    scale: true,
+  },
+  {
+    name: "erp",
+    img: "./images/erp.svg",
+    scale: true,
+  },
+  {
+    name: "user",
+    img: "./images/user.svg",
+    scale: true,
+  },
+  { name: "It", img: "./images/It.svg", scale: true },
+
+  {
+    name: "optimazation",
+    img: "./images/optimization.svg",
+    scale: true,
   },
 ];
