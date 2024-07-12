@@ -1,0 +1,16 @@
+{
+    "header_direction":"Direction",
+    "header_command":"Command",
+    "header_services":"Services",
+    "header_tools":"Tools",
+    "header_clients":"Clients",
+    "header_portfolio":"Portfolio",
+    "header_contact":"Contact",
+    "header_Language":"Language",
+    "mobile_app":"Development of mobile applications",
+    "erp":"Development and implementation ERP systems",
+    "user":"User interface, User experience design",
+    "It":"IT consulting",
+    "optimazation":"Optimization IT consulting infrastructure"
+
+}

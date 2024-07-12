@@ -1,0 +1,15 @@
+{
+    "header_direction":"Услуги",
+    "header_command":"Команда",
+    "header_services":"Напрaвление",
+    "header_tools":"Инструменты",
+    "header_clients":"Клиенты",
+    "header_portfolio":"Портфолио",
+    "header_contact":"Связаться",
+    "header_Language":"Язык",
+    "mobile_app":"Разработка мобильных приложений",
+    "erp":"Разработка и внедрение ERP систем",
+    "user":"UI / UX дизайн",
+    "It":"IT консалтинг",
+    "optimazation":"Оптимизация инфраструктуры"
+}
