@@ -1,12 +1,12 @@
 import { deleverData } from "@/config/delever";
-import { Box, Card, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Card, Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import TextField from "../text-field/text-field";
 
-const delever = () => {
+const smsuz = () => {
   return (
     <Box
       h={"780px"}
-      pt={50}
       bgImg={"url(./images/bg.jpg)"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -16,23 +16,20 @@ const delever = () => {
       justifyContent={"center"}
     >
       <Box w={"6xl"} display={"flex"} alignItems={"center"}>
-        <Stack flexDirection={"column"}>
-          <Image src={"./images/delever.png"} w={"550px"} />
-        </Stack>
         <Stack direction={"column"} ml={10}>
-          <Image src={"./images/deleverLogo.svg"} w={"252px"} mb={"30px"} />
+          <TextField fontSize={"64px"} children={"Smsuz.uz"} />
           <Box
-            w={"120px"}
+            w={"142px"}
             justifyContent={"center"}
             h={"36px"}
             display={"flex"}
             alignItems={"center"}
-            bg={"rgba(255,87,34,0.2)"}
+            bg={"rgba(68,115,229,0.2)"}
             borderRadius={"100px"}
           >
-            <Image src="./images/deleverIco.svg" w={"25px"} />
-            <Text fontSize={"14px"} color={"#FF5722"}>
-              Delivery
+            <Image src={"./images/Mail.svg"} />
+            <Text pl={2} fontSize={"14px"} color={"#4473E5"}>
+              Notification
             </Text>
           </Box>
           <Text
@@ -42,8 +39,7 @@ const delever = () => {
             color={"#464359"}
             lineHeight={"40px"}
           >
-            Delever - Delivery service automation targeted at both consumers and
-            restaurants.
+            Smsuz.uz - It is a platform for bulk SMS messaging.
           </Text>
           <Text
             fontSize={"20px"}
@@ -60,7 +56,7 @@ const delever = () => {
             mb={"40px"}
             gap={5}
           >
-            {deleverData.map((item, idx) => (
+            {deleverData.slice(0, 3).map((item, idx) => (
               <Card
                 mt={2}
                 bg={"#f4f7ff"}
@@ -77,9 +73,12 @@ const delever = () => {
             ))}
           </Box>
         </Stack>
+        <Stack flexDirection={"column"}>
+          <Image src={"./images/smsuz.png"} w={"550px"} />
+        </Stack>
       </Box>
     </Box>
   );
 };
 
-export default delever;
+export default smsuz;

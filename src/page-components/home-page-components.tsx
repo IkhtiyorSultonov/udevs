@@ -1,11 +1,15 @@
 import {
+  DeleverComponent,
   DesignComponents,
   Direction,
   ErpSystem,
+  GoodzoneComponent,
+  ImanComponent,
   ItConsulting,
   MobileApp,
   OptizimationComponent,
   OurServices,
+  SmsComponent,
   SponsorComponent,
   Team,
   ToolsComponents,
@@ -27,6 +31,10 @@ const HomePageComponents = () => {
       <ItConsulting />
       <ToolsComponents />
       <SponsorComponent/>
+      <DeleverComponent/>
+      <SmsComponent/>
+      <GoodzoneComponent/>
+      <ImanComponent/>
     </Box>
   );
 };

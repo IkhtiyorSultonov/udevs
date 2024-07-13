@@ -1,12 +1,11 @@
-import { deleverData } from "@/config/delever";
-import { Box, Card, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import { deleverData } from '@/config/delever'
+import { Box, Card, Image, Stack, Text } from '@chakra-ui/react'
+import React from 'react'
 
-const delever = () => {
+const goodzone = () => {
   return (
     <Box
       h={"780px"}
-      pt={50}
       bgImg={"url(./images/bg.jpg)"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -17,22 +16,22 @@ const delever = () => {
     >
       <Box w={"6xl"} display={"flex"} alignItems={"center"}>
         <Stack flexDirection={"column"}>
-          <Image src={"./images/delever.png"} w={"550px"} />
+          <Image src={"./images/goodzone.png"} w={"550px"} />
         </Stack>
         <Stack direction={"column"} ml={10}>
-          <Image src={"./images/deleverLogo.svg"} w={"252px"} mb={"30px"} />
+          <Image src={"./images/gzLogo.png"} w={"292px"} mb={"30px"} />
           <Box
-            w={"120px"}
+            w={"150px"}
             justifyContent={"center"}
             h={"36px"}
             display={"flex"}
             alignItems={"center"}
-            bg={"rgba(255,87,34,0.2)"}
+            bg={"rgba(245,0,0,0.2)"}
             borderRadius={"100px"}
           >
-            <Image src="./images/deleverIco.svg" w={"25px"} />
-            <Text fontSize={"14px"} color={"#FF5722"}>
-              Delivery
+            <Image src="./images/bag.svg" w={"25px"} />
+            <Text ml={2} fontSize={"14px"} color={"#FF5722"}>
+            E-Commerce
             </Text>
           </Box>
           <Text
@@ -42,8 +41,7 @@ const delever = () => {
             color={"#464359"}
             lineHeight={"40px"}
           >
-            Delever - Delivery service automation targeted at both consumers and
-            restaurants.
+           Goodzone - Internet shop of household appliances in Uzbekistan.
           </Text>
           <Text
             fontSize={"20px"}
@@ -79,7 +77,7 @@ const delever = () => {
         </Stack>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default delever;
+export default goodzone

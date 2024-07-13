@@ -9,6 +9,7 @@ const TextField: FC<TextFieldProps> = ({
   width,
   lineHeight,
   display
+  
 }) => {
   return (
     <Text
