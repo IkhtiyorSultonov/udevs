@@ -2,3 +2,8 @@ export {default as Direction} from "./direction/direction"
 export {default as OurServices} from "./ourServices/ourServices"
 export {default as Team} from './team/team'
 export {default as MobileApp} from "./mobile/mobile"
+export {default as ErpSystem} from './erp/erp'
+export {default as DesignComponents} from './design/design'
+export {default as OptizimationComponent} from './optimization/optizimation'
+export {default as ItConsulting} from './It/It'
+export {default as ToolsComponents} from './tools/tools'
