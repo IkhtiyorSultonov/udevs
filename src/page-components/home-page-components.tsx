@@ -4,8 +4,10 @@ import {
   Direction,
   ErpSystem,
   GoodzoneComponent,
+  HowWork,
   ImanComponent,
   ItConsulting,
+  MapsComponents,
   MobileApp,
   OptizimationComponent,
   OurServices,
@@ -35,6 +37,8 @@ const HomePageComponents = () => {
       <SmsComponent/>
       <GoodzoneComponent/>
       <ImanComponent/>
+      <HowWork/>
+      <MapsComponents/>
     </Box>
   );
 };
