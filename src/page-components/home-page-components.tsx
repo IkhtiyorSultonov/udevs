@@ -6,6 +6,7 @@ import {
   MobileApp,
   OptizimationComponent,
   OurServices,
+  SponsorComponent,
   Team,
   ToolsComponents,
 } from "@/components";
@@ -25,6 +26,7 @@ const HomePageComponents = () => {
       <OptizimationComponent />
       <ItConsulting />
       <ToolsComponents />
+      <SponsorComponent/>
     </Box>
   );
 };

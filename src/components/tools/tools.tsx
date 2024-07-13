@@ -48,7 +48,7 @@ const tools = () => {
         <TextField children={"Tools"} fontSize="64px" />
         <HStack spacing={6} pt={10}>
           <RadioGroup>
-            <Stack direction="row">
+            <Stack direction="row" gap={6}>
               {categoryData.map((c, idx) => (
                 <Radio
                   colorScheme="whiteAlpha"
@@ -58,7 +58,9 @@ const tools = () => {
                   value={c.name}
                   onChange={() => setFilter(c.name)}
                 >
-                  <Text textTransform={"capitalize"}>{c.name}</Text>
+                  <Text textTransform={"capitalize"} fontWeight={600}>
+                    {c.name}
+                  </Text>
                 </Radio>
               ))}
             </Stack>
@@ -71,7 +73,7 @@ const tools = () => {
               bg={item.category === filter ? "#ced6ee" : "#f4f7ff"}
               boxShadow={"0"}
               color={"black"}
-              w={"90px"}
+              w={"100px"}
               borderRadius={"5px"}
               h={"90px"}
               opacity={item.category === filter ? "100%" : "50%"}

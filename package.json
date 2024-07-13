@@ -23,9 +23,11 @@
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
     "react-hydration-provider": "^2.1.0",
     "react-i18next": "^14.1.2",
     "react-icons": "^5.2.1",
+    "react-multi-carousel": "^2.8.5",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
