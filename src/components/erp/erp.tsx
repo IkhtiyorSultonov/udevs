@@ -14,31 +14,48 @@ const erp = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Box w={"6xl"}>
-        <TextField children={"ERP systems"} fontSize="64px" />
-        <Box display={"flex"} justifyContent={"space-between"} mt={"50px"}>
+      <Box w={{ base: "95%", lg: '95%', xl: "6xl" }}>
+        <TextField
+          children={"ERP systems"}
+          fontSize={{ base: "32px", lg: "64px" }}
+        />
+        <Box
+          display={"flex"}
+          flexDirection={{ base: "column", md: 'column', lg: "row" }}
+          justifyContent={"space-between"}
+          mt={{ base: "20px", lg: "50px" }}
+        >
           <HStack
-            h={"500px"}
+            h={{ base: "250px", lg: "500px" }}
             bgImg={"url(./images/mobileBg.png)"}
             bgPosition={"center"}
+            w={{ md: '45%' }}
             bgRepeat={"no-repeat"}
             bgSize={"cover"}
           >
-            <Image src={"./images/erp.png"} w={"500px"} />
+            <Image
+              src={"./images/erp.png"}
+              w={{ base: "350px", lg: "500px" }}
+            />
           </HStack>
           <HStack flexDirection={"column"} w={"500px"}>
             <Text
-              w={"500px"}
+              mt={{ base: "4", md: '0', lg: "0" }}
+              w={{ base: "350px", lg: "500px" }}
               fontWeight={500}
-              fontSize={"24px"}
+              alignSelf={{ base: "start", lg: "center" }}
+              fontSize={{ base: "18px", lg: "24px" }}
+              lineHeight={{ base: "30px" }}
               color={"#18191f"}
             >
               IT Systems of any level of complexity at a convenient time for you
             </Text>
             <HStack
+              mr={{ base: "10", sm: "12", lg: "0" }}
+              w={{ base: "90%", sm: "450px", lg: "500px" }}
               flexWrap={"wrap"}
-              justifyContent={"space-between"}
-              mt={"25px"}
+              justifyContent={{ base: "start", sm: "space-between" }}
+              mt={"10px"}
             >
               {erpSystemData.map((card, idx) => (
                 <Card
@@ -46,10 +63,10 @@ const erp = () => {
                   mt={5}
                   key={idx}
                   bg={"#e0e8ff"}
-                  w={"150px"}
+                  w={{ base: "110px", sm: "130px", lg: "150px" }}
                   h={"118px"}
                 >
-                  <Image src={card.img} w={"56px"} />
+                  <Image src={card.img} w={{ base: "42px", lg: "56px" }} />
                   <Text color={"black"} pt={2}>
                     {card.name}
                   </Text>

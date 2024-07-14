@@ -1,9 +1,7 @@
 import {
   Box,
   Card,
-  HStack,
   Image,
-  Progress,
   Step,
   StepDescription,
   StepIcon,
@@ -23,17 +21,18 @@ const howWork = () => {
   return (
     <Box
       display={"flex"}
-      h={"500px"}
+      h={{base:'auto',lg:"500px"}}
       flexDirection={"column"}
       alignItems={"center"}
     >
-      <Box w={"6xl"}>
+      <Box w={{base:'95%',lg:"6xl"}}>
         <TextField children={"How we work!"} fontSize="64px" />
       </Box>
       <Box
-        display={"flex"}
-        mt={20}
+        display={{base:'none',lg:"flex"}}
+        mt={{base:0,lg:20}}
         w={"90%"}
+        flexDirection={{base:'column',lg:'row'}}
         justifyContent={"space-between"}
         pos={"relative"}
       >
@@ -42,14 +41,15 @@ const howWork = () => {
           pos={"absolute"}
           zIndex={1}
           top={10}
-          left={"10%"}
+          left={{base:'0',lg:'10%'}}
         />
         {workData.map((item, idx) => (
           <Card
             key={idx}
             w={"250px"}
-            h={"160px"}
-            alignItems={"center"}
+            mt={{base:10,lg:0}}
+            h={{base:'180px',lg:"160px"}}
+            alignItems={{base:'start',lg:"center"}}
             bg={"#fff"}
             boxShadow={"0"}
             justifyContent={"space-between"}
@@ -58,12 +58,27 @@ const howWork = () => {
             <Text color={"black"} fontWeight={700} mt={2}>
               {item.name}
             </Text>
-            <Text fontSize={"16px"} textAlign={"center"} color={"#000"} mt={2}>
+            <Text fontSize={"16px"} textAlign={{base:'start',lg:'center'}} color={"#000"} mt={{base:0,lg:2}}>
               {item.title}
             </Text>
           </Card>
         ))}
       </Box>
+      <Stepper index={4} orientation='vertical' w={'90%'} height='400px' gap='0' mt={5} display={{base:'block',lg:'none'}}>
+      {workData.map((step, index) => (
+        <Step key={index} style={{marginTop:'20px'}}>
+          <StepIndicator  w={'61px'} h={'60px'}>
+          <Image src={step.img} w={"61px"} h={"60px"} zIndex={2} />
+          </StepIndicator>
+          <Box  w={'90%'}>
+            <StepTitle style={{fontWeight:'bold'}}>{step.name}</StepTitle>
+            <StepDescription>{step.title}</StepDescription>
+          </Box>
+
+          <StepSeparator />
+        </Step>
+      ))}
+    </Stepper>
     </Box>
   );
 };

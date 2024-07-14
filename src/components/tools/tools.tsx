@@ -37,28 +37,30 @@ const tools = () => {
   return (
     <Box
       bg={"#f4f7ff"}
-      h={"800px"}
-      mt={20}
+      h={{base:'auto',lg:'800px'}}
       alignItems={"center"}
       justifyContent={"center"}
       display={"flex"}
       flexDirection={"column"}
+      mt={{base:'50px',lg:"0"}}
     >
-      <Box w={"6xl"} display={"flex"} flexDirection={"column"}>
-        <TextField children={"Tools"} fontSize="64px" />
-        <HStack spacing={6} pt={10}>
+      <Box w={{base:'95%',xl:"6xl"}} display={"flex"} flexDirection={"column"} pt={5} pb={10}>
+        <TextField children={"Tools"} fontSize="64px"  />
+        <HStack spacing={6} pt={10}  flexWrap={{base:"wrap",lg:'nowrap'}} >
           <RadioGroup>
-            <Stack direction="row" gap={6}>
+            <Stack direction={'row'} gap={6} flexWrap={{base:"wrap",lg:'nowrap'}} justifyContent={{base:'space-between'}}>
               {categoryData.map((c, idx) => (
                 <Radio
-                  colorScheme="whiteAlpha"
+                  colorScheme="blue"
                   border={"2px solid blue"}
                   size={"lg"}
                   key={idx}
                   value={c.name}
+                  w={'40%'}
                   onChange={() => setFilter(c.name)}
+                  
                 >
-                  <Text textTransform={"capitalize"} fontWeight={600}>
+                  <Text textTransform={"capitalize"} fontWeight={600} >
                     {c.name}
                   </Text>
                 </Radio>

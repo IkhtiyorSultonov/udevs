@@ -6,32 +6,52 @@ import { mobileData, mobTechnologies } from "@/config/mobile";
 const mobile = () => {
   return (
     <Box
-      h={"850px"}
+      h={{ base: "1000px", md: "800px", xl: "850px" }}
       bgImg={"url(./images/bg.jpg)"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
+      ml={{ sm: "5", lg: "0" }}
       display={"flex"}
       alignItems={"center"}
       lineHeight={"64px"}
-      justifyContent={"center"}
+      justifyContent={{base:'center', sm: "start", md: "center" }}
     >
-      <Box w={"6xl"} mt={"50px"} pt={"50px"}>
+      <Box
+        w={{ base: "95%", sm: "70%", md: "95%", xl: "6xl" }}
+        mt={"50px"}
+        pt={"50px"}
+      >
         <TextField
           children={"Development of mobile applications"}
-          fontSize="64px"
-          width="800px"
+          fontSize={{ base: "32px", md: "50px", lg: "64px" }}
+          width={{ base: "90%", lg: "800px" }}
+          lineHeight={{ base: "45px", md: "60px", lg: "70px" }}
         />
-        <Box display={"flex"} justifyContent={"space-between"} pt={"60px"}>
+        <Image
+          src={"./images/mobileImg.png"}
+          w={"345px"}
+          display={{ base: "block", md: "none" }}
+          bgImg={"url(./images/mobileBg.png)"}
+          bgPosition={"center"}
+          bgRepeat={"no-repeat"}
+          bgSize={"cover"}
+          mt={4}
+        />
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
+          pt={{ base: "20px", md: "60px" }}
+        >
           <HStack
-            w={"500px"}
+            w={{ base: "95%", md: "50%", lg: "500px" }}
             flexDirection={"column"}
             alignItems={"start"}
             justifyContent={"center"}
           >
             <Text
-              fontSize={"24px"}
-              lineHeight={"40px"}
+              fontSize={{ base: "16px", lg: "24px" }}
+              lineHeight={{ base: "30px", lg: "40px" }}
               color={"#18191f"}
               fontWeight={500}
               mb={"25px"}
@@ -41,29 +61,31 @@ const mobile = () => {
             </Text>
             <Box
               display={"flex"}
-              w={"full"}
+              w={{base:'350px', md: "400px", lg: "95%" }}
               justifyContent={"space-between"}
               mb={"40px"}
             >
               {mobileData.map((item, idx) => (
                 <Card
                   bg={"#f4f7ff"}
-                  w={"150px"}
-                  h={"118px"}
-                  p={"10px"}
+                  w={{ base: "105px", md: "110px", lg: "150px" }}
+                  h={{ base: "100px", md: "120px", lg: "118px" }}
+                  p={{ base: "5px", lg: "10px" }}
                   key={idx}
                 >
-                  <Image src={item.img} w={"56px"} />
-                  <Text color={"black"}>{item.name}</Text>
+                  <Image src={item.img} w={{ base: "42px", md: "56px" }} />
+                  <Text color={"black"} fontSize={{ base: "14px", lg: "18px" }}>
+                    {item.name}
+                  </Text>
                 </Card>
               ))}
             </Box>
-            <Text fontSize={"42px"} color={"#464359"}>
+            <Text fontSize={{ base: "32px", md: "40px" }} color={"#464359"}>
               Technologies
             </Text>
             <Box
               display={"flex"}
-              w={"350px"}
+              w={{ base: "70%", lg: "342px" }}
               mb={"40px"}
               justifyContent={"space-between"}
             >
@@ -78,7 +100,9 @@ const mobile = () => {
             </Box>
           </HStack>
           <HStack
-            h={"500px"}
+            ml={{ md: "4", lg: "0" }}
+            display={{ base: "none", md: "block" }}
+            h={{ md: "300px", lg: "500px" }}
             bgImg={"url(./images/mobileBg.png)"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}

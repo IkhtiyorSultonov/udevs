@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 
-export interface TextFieldProps{
+export interface TextFieldProps {
     children:ReactNode,
     fontFamily?:string,
-    fontSize?:string,
-    width?:string,
-    lineHeight?:string,
+    fontSize?:any,
+    width?:any,
+    lineHeight?:any,
     display?:string,
+    textAlign?:any,
 }

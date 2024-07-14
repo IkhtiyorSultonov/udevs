@@ -5,8 +5,9 @@ import React from "react";
 const delever = () => {
   return (
     <Box
-      h={"780px"}
+      h={{ base: "auto", lg: "535px" }}
       pt={50}
+      mt={{lg:20}}
       bgImg={"url(./images/bg.jpg)"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
@@ -15,11 +16,16 @@ const delever = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
-      <Box w={"6xl"} display={"flex"} alignItems={"center"}>
-        <Stack flexDirection={"column"}>
+      <Box
+        w={{ base: "95%", xl: "6xl" }}
+        display={"flex"}
+        flexDirection={{ base: "column", lg: "row" }}
+        alignItems={{ base: "start", lg: "center" }}
+      >
+        <Stack flexDirection={"column"} display={{ base: "none", lg: "block" }}>
           <Image src={"./images/delever.png"} w={"550px"} />
         </Stack>
-        <Stack direction={"column"} ml={10}>
+        <Stack direction={"column"} ml={{ base: 0, lg: 10 }}>
           <Image src={"./images/deleverLogo.svg"} w={"252px"} mb={"30px"} />
           <Box
             w={"120px"}
@@ -35,12 +41,18 @@ const delever = () => {
               Delivery
             </Text>
           </Box>
+          <Image
+            src={"./images/delever.png"}
+            w={{base:'100%',sm:'80%'}}
+            mt={5}
+            display={{ base: "block", lg: "none" }}
+          />
           <Text
-            w={"547px"}
-            fontSize={"20px"}
+            w={{ base: "370px", lg: "547px" }}
+            fontSize={{ base: "16px", lg: "20px" }}
             mt={"35px"}
             color={"#464359"}
-            lineHeight={"40px"}
+            lineHeight={{ base: "30px", lg: "40px" }}
           >
             Delever - Delivery service automation targeted at both consumers and
             restaurants.
@@ -55,7 +67,7 @@ const delever = () => {
           </Text>
           <Box
             display={"flex"}
-            w={"547px"}
+            w={{ base: "100%", sm: "90%", lg: "547px" }}
             flexWrap={"wrap"}
             mb={"40px"}
             gap={5}
@@ -64,13 +76,17 @@ const delever = () => {
               <Card
                 mt={2}
                 bg={"#f4f7ff"}
-                w={"160px"}
-                h={"130px"}
-                p={"20px"}
+                w={{ base: "105px", sm: "140px", lg: "150px" }}
+                h={"118px"}
+                p={{ base: "2", lg: "10px" }}
                 key={idx}
               >
                 <Image src={item.img} w={"56px"} />
-                <Text color={"black"} mt={2}>
+                <Text
+                  color={"black"}
+                  mt={2}
+                  fontSize={{ base: "14px", lg: "18px" }}
+                >
                   {item.name}
                 </Text>
               </Card>

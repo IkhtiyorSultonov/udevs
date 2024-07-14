@@ -8,7 +8,8 @@ const TextField: FC<TextFieldProps> = ({
   fontSize,
   width,
   lineHeight,
-  display
+  display,
+  textAlign,
   
 }) => {
   return (
@@ -18,6 +19,7 @@ const TextField: FC<TextFieldProps> = ({
       color={"#1b5bf7"}
       fontWeight={"bold"}
       w={width}
+      textAlign={textAlign}
       lineHeight={lineHeight}
       display={display}
     >

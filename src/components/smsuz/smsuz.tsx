@@ -6,18 +6,24 @@ import TextField from "../text-field/text-field";
 const smsuz = () => {
   return (
     <Box
-      h={"780px"}
+      h={{ base: "auto", lg: "535px" }}
       bgImg={"url(./images/bg.jpg)"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
+      mt={{lg:20}}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
     >
-      <Box w={"6xl"} display={"flex"} alignItems={"center"}>
-        <Stack direction={"column"} ml={10}>
-          <TextField fontSize={"64px"} children={"Smsuz.uz"} />
+      <Box
+        w={{ base: "95%", xl: "6xl" }}
+        display={"flex"}
+        flexDirection={{ base: "column", lg: "row" }}
+        alignItems={{ base: "start", lg: "center" }}
+      >
+        <Stack direction={"column"}  ml={{base:'0',lg:"10"}}>
+          <TextField fontSize={{base:'52px',lg:"64px"}} children={"Smsuz.uz"} />
           <Box
             w={"142px"}
             justifyContent={"center"}
@@ -32,12 +38,18 @@ const smsuz = () => {
               Notification
             </Text>
           </Box>
+          <Image
+            mt={5}
+            src={"./images/smsuz.png"}
+            w={{base:'100%',sm:'80%'}}
+            display={{ base: "block", lg: "none" }}
+          />
           <Text
-            w={"547px"}
-            fontSize={"20px"}
-            mt={"35px"}
-            color={"#464359"}
-            lineHeight={"40px"}
+              w={{ base: "345px", lg: "547px" }}
+              fontSize={{ base: "16px", lg: "20px" }}
+              mt={"35px"}
+              color={"#464359"}
+              lineHeight={{ base: "30px", lg: "40px" }}
           >
             Smsuz.uz - It is a platform for bulk SMS messaging.
           </Text>
@@ -51,19 +63,20 @@ const smsuz = () => {
           </Text>
           <Box
             display={"flex"}
-            w={"547px"}
+            w={{ base: "100%", sm: "90%", lg: "547px" }}
             flexWrap={"wrap"}
+            justifyContent={{base:'space-between',lg:'start'}}
             mb={"40px"}
-            gap={5}
+            gap={{base:3,lg:5}}
           >
             {deleverData.slice(0, 3).map((item, idx) => (
               <Card
-                mt={2}
-                bg={"#f4f7ff"}
-                w={"160px"}
-                h={"130px"}
-                p={"20px"}
-                key={idx}
+              mt={2}
+              bg={"#f4f7ff"}
+              w={{ base: "110px", sm: "140px", lg: "150px" }}
+              h={"118px"}
+              p={{ base: "2", lg: "10px" }}
+              key={idx}
               >
                 <Image src={item.img} w={"56px"} />
                 <Text color={"black"} mt={2}>
@@ -74,7 +87,11 @@ const smsuz = () => {
           </Box>
         </Stack>
         <Stack flexDirection={"column"}>
-          <Image src={"./images/smsuz.png"} w={"550px"} />
+          <Image
+            src={"./images/smsuz.png"}
+            w={"550px"}
+            display={{ base: "none", lg: "block" }}
+          />
         </Stack>
       </Box>
     </Box>
