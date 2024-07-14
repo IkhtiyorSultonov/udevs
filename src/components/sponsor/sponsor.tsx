@@ -11,6 +11,7 @@ const sponsor = () => {
       flexDirection={"column"}
       alignItems={"center"}
       justifyContent={'center'}
+      id="clients"
     >
       <Box w={{ base: '95%', xl: "6xl" }}>
         <TextField children={"Our clients"} fontSize={{ base: "32px", lg: "64px" }} />

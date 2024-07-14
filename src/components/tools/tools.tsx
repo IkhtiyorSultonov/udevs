@@ -43,6 +43,7 @@ const tools = () => {
       display={"flex"}
       flexDirection={"column"}
       mt={{base:'50px',lg:"0"}}
+      id="tools"
     >
       <Box w={{base:'95%',xl:"6xl"}} display={"flex"} flexDirection={"column"} pt={5} pb={10}>
         <TextField children={"Tools"} fontSize="64px"  />

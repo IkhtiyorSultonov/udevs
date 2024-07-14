@@ -12,6 +12,7 @@ const team = () => {
       alignItems={"center"}
       justifyContent={"center"}
       bg={"#f4f7ff"}
+      id="command"
     >
       <Box w={{ base: "95% ", lg: "95%", xl: "6xl" }}>
         <TextField

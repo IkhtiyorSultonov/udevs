@@ -14,6 +14,7 @@ const direction = () => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      id="direction"
     >
       <Box
         display={"flex"}
@@ -31,6 +32,8 @@ const direction = () => {
           <Image
             src="./images/logo.svg"
             w={{ base: "125px", sm: "125px", lg: "267px" }}
+            className="animate__animated animate__bounceInDown"
+
           />
           <Text
             fontSize={{ md: "24px", lg: "40px" }}
@@ -49,14 +52,18 @@ const direction = () => {
             fontWeight={"bold"}
             lineHeight={"50px"}
             textAlign={{ sm: "center", lg: "start" }}
+            className="animate__animated animate__bounceInUp"
           >
             <TypeAnimation
+              repeat={Infinity}
               sequence={[
                 "Development of mobile applications",
                 1000,
                 "Development and implementation ERP systems",
                 1000,
                 "User interface, User experience",
+                1000,
+                "Optimization IT consulting infrastructure",
                 1000,
               ]}
             />

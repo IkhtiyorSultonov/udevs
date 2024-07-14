@@ -24,7 +24,7 @@ import {
 const maps = () => {
   return (
     <Box
-      h={"980px"}
+      h={{ base: "1200px", lg: "980px" }}
       w={"full"}
       display={"flex"}
       justifyContent={"center"}
@@ -34,22 +34,35 @@ const maps = () => {
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
     >
-      <Box w={"6xl"}>
-        <TextField children={"Contact us"} fontSize="64px" />
+      <Box w={{ base: "95%", lg: "6xl" }}>
+        <TextField
+          children={"Contact us"}
+          fontSize={{ base: "32px", lg: "64px" }}
+        />
         <Box
           w={"100%"}
           h={"680px"}
           bg={"#fff"}
-          mt={"80px"}
+          mt={{ base: "40px", lg: "80px" }}
           display={"flex"}
-          boxShadow={"0 0 12px #B4BEC8"}
+          flexDirection={{ base: "column", lg: "row" }}
+          boxShadow={{ base: "0", lg: "0 0 12px #B4BEC8" }}
         >
-          <Box p={"40px 98px 88px"} w={"50%"} color={"#B4BEC8"}>
+          <Box
+            p={{ base: 0, lg: "40px 98px 88px" }}
+            w={{ base: "100%", lg: "50%" }}
+            color={"#B4BEC8"}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={{ base: "center", lg: "start" }}
+          >
             <Text
               fontSize={"20px"}
               color={"#0f001a"}
               fontWeight={700}
               mb={"20px"}
+              mt={{ base: -10, lg: 0 }}
+              alignSelf={'start'}
             >
               Leave us a message
             </Text>
@@ -94,7 +107,7 @@ const maps = () => {
               Send
             </Button>
           </Box>
-          <Box mt={"80px"} color={"#0f001a"}>
+          <Box mt={{base:'20px',lg:"80px"}} color={"#0f001a"}>
             <HStack h={"50px"} pt={5} w={"450px"}>
               <Image src="./images/loaction.svg" w={"25px"} />
               <Text>
@@ -124,13 +137,13 @@ const maps = () => {
               <Icon as={FaFacebook} fontSize={"25px"} color={"blue"} />
               <Icon as={FaTwitter} fontSize={"25px"} color={"blue"} />
             </HStack>
-            <Box width={'300px'} h={'300px'} mt={5}>
-                <iframe
-                  src="https://yandex.com/map-widget/v1/?from=mapframe&ll=69.329424%2C41.337761&mode=usermaps&source=mapframe&um=constructor%3A3d9eefa927bd54bcc9e8fa398a73c8cafb60622737263c96ad9341c32c21fa69&utm_source=mapframe&z=14"
-                  width="400"
-                  height="200"
-                  style={{'position':'relative'}}
-                ></iframe>
+            <Box width={"300px"} h={"300px"} mt={5}>
+              <iframe
+                src="https://yandex.com/map-widget/v1/?from=mapframe&ll=69.329424%2C41.337761&mode=usermaps&source=mapframe&um=constructor%3A3d9eefa927bd54bcc9e8fa398a73c8cafb60622737263c96ad9341c32c21fa69&utm_source=mapframe&z=14"
+                width="350"
+                height="200"
+                style={{ position: "relative" }}
+              ></iframe>
             </Box>
           </Box>
         </Box>

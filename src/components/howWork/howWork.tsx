@@ -26,7 +26,7 @@ const howWork = () => {
       alignItems={"center"}
     >
       <Box w={{base:'95%',lg:"6xl"}}>
-        <TextField children={"How we work!"} fontSize="64px" />
+        <TextField children={"How we work!"} fontSize={{base:'32px',lg:"64px"}} />
       </Box>
       <Box
         display={{base:'none',lg:"flex"}}
@@ -64,14 +64,14 @@ const howWork = () => {
           </Card>
         ))}
       </Box>
-      <Stepper index={4} orientation='vertical' w={'90%'} height='400px' gap='0' mt={5} display={{base:'block',lg:'none'}}>
+      <Stepper index={5} orientation='vertical' w={'90%'} height='400px' gap='0' mt={5} display={{base:'block',lg:'none'}}>
       {workData.map((step, index) => (
-        <Step key={index} style={{marginTop:'20px'}}>
+        <Step key={index} style={{marginTop:'30px'}}>
           <StepIndicator  w={'61px'} h={'60px'}>
           <Image src={step.img} w={"61px"} h={"60px"} zIndex={2} />
           </StepIndicator>
-          <Box  w={'90%'}>
-            <StepTitle style={{fontWeight:'bold'}}>{step.name}</StepTitle>
+          <Box  w={'90%'} >
+            <StepTitle  style={{fontWeight:'bold'}}>{step.name}</StepTitle>
             <StepDescription>{step.title}</StepDescription>
           </Box>
 

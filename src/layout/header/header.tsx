@@ -21,12 +21,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import { PiCaretDownLight } from "react-icons/pi";
 import i18n from "../../i18n/index";
 import { useTranslation } from "react-i18next";
 import { IoIosMenu } from "react-icons/io";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-scroll";
 const Header = () => {
   const router = useRouter();
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ const Header = () => {
     i18n.changeLanguage(lng);
     router.replace(router.asPath).then();
   };
-  
+
   return (
     <Box
       h={"72px"}
@@ -47,6 +48,7 @@ const Header = () => {
       zIndex={999}
       bg={"white"}
       w={"full"}
+      className="animate__animated animate__fadeInDownBig"
     >
       <Box
         display={"flex"}
@@ -72,6 +74,8 @@ const Header = () => {
                     rightIcon={<PiCaretDownLight />}
                     color={"#18191f"}
                     fontSize={"14px"}
+                    bg={"#fff"}
+                    _active={{ bg: "#fff" }}
                     p={0}
                     ml={5}
                     _hover={{
@@ -88,7 +92,7 @@ const Header = () => {
                         _hover={{ bg: "#1b5bf7", color: "#fff" }}
                         fontSize={"13px"}
                         bg={"#fff"}
-                        // onClick={() => onLanguage()}
+                        onClick={() => onLanguage(item.lng)}
                       >
                         <Image w={"50px"} src={item.img} p={2} />
                         {t(item.name)}
@@ -116,7 +120,15 @@ const Header = () => {
                   bg={c.button ? "#1b5bf7" : ""}
                   borderRadius={c.button ? "8px" : "0"}
                 >
-                  {t(c.label)}
+                  <Link
+                    to={c.route}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    {t(c.label)}
+                  </Link>
                 </Box>
               )}
             </Stack>
@@ -150,7 +162,7 @@ const Header = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
               >
-                <Text fontSize={"32px"}>Services</Text>
+                <Text fontSize={"32px"} >Services</Text>
                 <Text fontSize={"32px"}>Clients</Text>
                 <Text fontSize={"32px"}>Command</Text>
               </DrawerBody>

@@ -1,12 +1,12 @@
 export const navigation = [
   {
     label: "header_direction",
-    route: "/",
+    route: "direction",
     ml: true,
   },
   {
     label: "header_command",
-    route: "/",
+    route: "command",
   },
   {
     label: "header_services",
@@ -34,11 +34,11 @@ export const navigation = [
   },
   {
     label: "header_tools",
-    route: "/",
+    route: "tools",
   },
   {
     label: "header_clients",
-    route: "/",
+    route: "clients",
   },
   {
     label: "header_portfolio",

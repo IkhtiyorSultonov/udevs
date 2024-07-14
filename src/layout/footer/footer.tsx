@@ -8,17 +8,34 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <Box
-      h={"464px"}
+      h={{ base: "auto", xl: "464px" }}
       bg={"#f4f7ff"}
       display={"flex"}
-      flexDirection={"column"}
-      alignItems={"center"}
+      flexDirection={{ base: "column" }}
+      alignItems={{ base: "center", lg: "center" }}
       justifyContent={"center"}
     >
-      <Image src={"./images/Logo.svg"} w={"106px"} />
-      <Box w={"6xl"} display={"flex"} justifyContent={"space-between"} mt={10}>
-        {footerMenu.map((c, idx) => (
-          <Card key={idx} bg={"#f4f7ff"} boxShadow={"0"}>
+      <Image
+        src={"./images/Logo.svg"}
+        w={"106px"}
+        alignSelf={{ base: "start", lg: "center" }}
+        ml={{ base: "2", lg: 0 }}
+        mt={{ base: 20, lg: "10" }}
+      />
+      <Box
+        w={{ base: "95%", xl: "6xl" }}
+        display={"flex"}
+        justifyContent={"space-between"}
+        mt={10}
+        flexDirection={{ base: "column", lg: "row" }}
+      >
+        {footerMenu.reverse().map((c, idx) => (
+          <Card
+            key={idx}
+            bg={"#f4f7ff"}
+            boxShadow={"0"}
+            mt={{ base: 10, lg: "0" }}
+          >
             <Text color={"black"} fontSize={"1em"} fontWeight={600}>
               {t(c.label)}
             </Text>
@@ -31,15 +48,18 @@ const Footer = () => {
         ))}
       </Box>
       <Box
-        w={"6xl"}
+        mb={{ base: 10, lg: 5 }}
+        w={{ base: "95%", xl: "6xl" }}
         borderTop={"1px solid rgba(27, 91, 247, .2)"}
         mt={10}
         display={"flex"}
+        alignItems={{ base: "center" }}
+        flexDirection={{ base: "column", lg: "row" }}
         justifyContent={"space-between"}
         pt={5}
       >
         <Box color={"#1b5bf7"}>© 2024 Udevs. All rights reserved</Box>
-        <Box display={"flex"} gap={4}>
+        <Box display={"flex"} gap={4} mt={{ base: "2" }}>
           <Card
             h={"40px"}
             w={"40px"}
