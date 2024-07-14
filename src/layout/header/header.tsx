@@ -92,7 +92,7 @@ const Header = () => {
                         _hover={{ bg: "#1b5bf7", color: "#fff" }}
                         fontSize={"13px"}
                         bg={"#fff"}
-                        onClick={() => onLanguage(item.lng)}
+                        onClick={() => onLanguage(item.lng as string)}
                       >
                         <Image w={"50px"} src={item.img} p={2} />
                         {t(item.name)}

@@ -16,19 +16,28 @@ export const navigation = [
       {
         name: "mobile_app",
         img: "./images/mobileApp.svg",
+        lng: ''
+
       },
       {
         name: "erp",
+        lng: '',
         img: "./images/erp.svg",
       },
       {
         name: "user",
         img: "./images/user.svg",
       },
-      { name: "It", img: "./images/It.svg" },
+      {
+        name: "It", img: "./images/It.svg",
+        lng: ''
+
+      },
       {
         name: "optimazation",
         img: "./images/optimization.svg",
+        lng: ''
+
       },
     ],
   },
@@ -45,10 +54,26 @@ export const navigation = [
     route: "/",
     menu: true,
     menuItem: [
-      { name: "Delever", img: "./images/delever.svg" },
-      { name: "Sms.uz", img: "./images/sms.svg" },
-      { name: "Goodzone", img: "./images/goodzone.svg" },
-      { name: "Iman", img: "./images/Iman.svg" },
+      {
+        name: "Delever",
+        lng: '',
+        img: "./images/delever.svg"
+      },
+      {
+        name: "Sms.uz",
+        lng: '',
+        img: "./images/sms.svg"
+      },
+      {
+        name: "Goodzone",
+        lng: '',
+        img: "./images/goodzone.svg"
+      },
+      {
+        name: "Iman",
+        lng: '',
+        img: "./images/Iman.svg"
+      },
     ],
   },
   {
