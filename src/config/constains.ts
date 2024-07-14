@@ -97,3 +97,65 @@ export const ourService = [
     scale: true,
   },
 ];
+
+export const footerMenu = [
+  {
+    label: "Aboutus",
+    route: "/",
+    ml: true,
+    menuItem: [
+      {
+        name: "Direction",
+      },
+      {
+        name: "Command",
+      },
+      {
+        name: "Tools",
+      },
+      { name: "Clients" },
+      {
+        name: "optimazation",
+      },
+    ],
+  },
+  {
+    label: "Services",
+    menuItem: [
+      {
+        name: "team",
+      },
+      {
+        name: "mobile_app",
+        scale: true,
+      },
+      {
+        name: "erp",
+        img: "./images/erp.svg",
+        scale: true,
+      },
+      {
+        name: "user",
+        scale: true,
+      },
+      { name: "It", img: "./images/It.svg", scale: true },
+
+      {
+        name: "optimazation",
+        img: "./images/optimization.svg",
+        scale: true,
+      },
+    ],
+  },
+  {
+    label: "header_portfolio",
+    route: "/",
+    menu: true,
+    menuItem: [
+      { name: "Delever", img: "./images/delever.svg" },
+      { name: "Sms.uz", img: "./images/sms.svg" },
+      { name: "Goodzone", img: "./images/goodzone.svg" },
+      { name: "Iman", img: "./images/Iman.svg" },
+    ],
+  },
+];

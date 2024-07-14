@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import 'react-multi-carousel/lib/styles.css';
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { Client, HydrationProvider } from "react-hydration-provider";

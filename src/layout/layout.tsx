@@ -3,11 +3,13 @@ import { LayoutProps } from './layout.props';
 import { Box } from '@chakra-ui/react';
 import Header from './header/header';
 import Footer from './footer/footer';
+import Chat from './chat/chat';
 
 const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <Box maxW={'full'} overflow={'hidden'} pos={'relative'}>
             <Header/>
+            <Chat/>
             <Box minW={'full'}   minH={'400vh'} >
                 {children}
             </Box>
